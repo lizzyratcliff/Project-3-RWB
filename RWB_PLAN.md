@@ -1,215 +1,152 @@
-# Project 1: Group Research Plan
-**Course:** KIN 7518 Social Issues in Sport  
-**Due:** Monday, January 27, 2026 by 11:59 PM  
-**Submission:** Email to [yqian@lsu.edu](mailto:yqian@lsu.edu) — One member submits, **CC all group members**  
-**Format:** Markdown (.md) file  
-**File Naming:** `GROUPNAME_PLAN.md` (see group names below)
+# Project 3 — Research Plan (Group RWB)
+
+**Course:** KIN 7518 — Social Issues in Sport  
+**Project theme:** Conflict, Morality, and Polarization  
+**Dataset:** **B50** — cross-platform social comments (stored **locally**; see README). Files: `B50_INS_COMMENT.xlsx`, `B50_X_COMMENT.xlsx`, `B50_YT_COMMENT.xlsx`  
+**Due:** Friday, April 10, 2026 — follow class workflow (branch → PR → review → merge) and instructor submission instructions  
 
 ---
 
-## Group Names for File Naming
-Use your official group name exactly as shown:
-- `CursorPros_PLAN.md`
-- `CPN_PLAN.md`
-- `GeauxTigers_PLAN.md`
-- `TheMcGradys_PLAN.md`
-- `TSPS_PLAN.md`
-- `RWB_PLAN.md`
-- `PKB_PLAN.md`
-- `ReesesPuffs_PLAN.md`
-
----
-
-## Instructions
-Complete each section below as a group. This document should demonstrate that your team has a clear, defensible plan for Project 1. The instructor will provide feedback during W3 to help you refine your approach before the work session begins.
-
-> **Note:** This is a planning document, not a final report. Expectations are for *reasonable preliminary thinking*, not polished answers.
-
----
-
-## 1. Research Questions & Significance
-For each research question, address all three components below. The goal is to show the logical connection between the phenomenon you're investigating, the question you're asking, and why it matters.
+## 1. Research questions and significance
 
 ### RQ 1
-**The Question:**  
-[State your research question clearly and specifically]
+**The question**  
+In the **B50** cross-platform comment corpus (**Instagram**, **X**, **YouTube**), how do **moralized discourse** (comments that cast figures or groups as **virtuous vs. corrupt**, **deserving vs. undeserving**, **dangerous vs. harmless**, or that invoke **duty**, **betrayal**, or **care/harm**) and **polarization cues** (clear **pro-Trump vs. anti-Trump** positioning, **partisan blame**, or **us-vs-them** framing) **differ across platforms**—and how are those patterns associated with **visible engagement** (e.g., **likes**; on **X**, also **retweets** and **replies**)?
 
-**The Context:**  
-What phenomenon, debate, or gap does this question address? Connect to:
-- Current events, public discourse, or real-world observations
-- Relevant theoretical perspectives from *any* discipline (e.g., sociology, communication, psychology, marketing, cultural studies, media studies, gender studies, etc.)—**justify why your chosen framework is appropriate**
+**The context**  
+B50 comments cluster around **hybrid sport–politics media**: public figures and **golf/sports crossover content** that draws **audience talk about Donald Trump**, elections, and related controversies. That setting is a strong fit for the course theme **Conflict, Morality, and Polarization** because audiences often **moralize** politics (who is a “thief,” who “tried to murder,” who deserves veterans’ charity) while **sorting** into opposing camps. We draw on **political communication** (framing and agenda-setting), work on **affective polarization** (identity-laden support and opposition), and **moral foundations** thinking (harm, fairness, loyalty, authority) as lenses for **why** language takes the shape it does—not to judge voters, but to **describe comment-level patterns**. A **cross-platform** design fits because **Instagram**, **X**, and **YouTube** differ in **length norms**, **threading**, and **algorithmic visibility**, which may shape how **conflict** and **morality** are expressed.
 
-**Why It Matters:**  
-Who cares about this question? Why now? What's at stake for stakeholders (e.g., athletes, fans, media, organizations, policymakers, researchers)?
-
-[Your response here]
+**Why it matters**  
+**Citizens**, **journalists**, and **platforms** need clearer pictures of how **moral outrage** and **polarized cues** show up where **sport and politics** overlap. **Researchers and instructors** can use findings for **media literacy** (how hybrid content invites political talk) and for discussing **civil discourse**. **Stakeholders** in sport and politics care whether public comment spaces **amplify hostility** or **mostly cheerlead**—our corpus supports **descriptive** answers for this scrape, not forecasts of elections.
 
 ---
 
-### RQ 2 (if applicable)
-**The Question:**  
-[State your research question clearly and specifically]
+### RQ 2 (optional)
+**The question**  
+On **X only**, is **author verification** (`blue_verified`) or **follower count** associated with **higher engagement** or with a **greater share of moralized or highly polarized** comments in the B50 subsample?
 
-**The Context:**  
-[Your response here]
+**The context**  
+The **X** file includes **rich author metadata** that the other two exports lack. That lets us ask whether **status and reach** align with **how** conflict and morality are performed in this smaller **X** slice—relevant to debates about **who dominates** visible political talk.
 
-**Why It Matters:**  
-[Your response here]
-
----
-
-## 2. Dataset Selection & Justification
-Identify which dataset you are using and explain why.
-
-**Dataset Choice:** [ ] Clark-Reese (ARCC) / [ ] Fit-Mom Discourse
-
-**Justification:**  
-[Why this dataset is appropriate for your RQ]
-
-**Key files you plan to use:**
-- [List specific data files]
+**Why it matters**  
+If **verified** or **large-follower** accounts systematically differ from others, readers should not treat **“typical X comments”** in B50 as **representative** of all users; it affects how we **interpret** polarization patterns on that platform.
 
 ---
 
-## 3. Preliminary Variable Operationalization
-For your main constructs, describe how you will measure or identify them in the data.
+## 2. Dataset selection and justification
 
-| Construct | Operational Definition | Data Source / Indicator |
+**Dataset**  
+B50 (Instagram, X, and YouTube comment exports). Data files are **not** in this repository; each group member keeps copies **locally** or on an agreed **shared drive**.
+
+**Justification**  
+B50 is appropriate because it provides **the same topical conversation** (sport–politics crossover with heavy **Trump-related** audience talk) across **three platforms**, which matches **RQ 1**’s cross-platform design. The comments routinely express **conflict** (attacks, blame), **morality** (who deserves charity, who is corrupt or dangerous), and **polarization** (pro- vs. anti-Trump cues), so the corpus aligns with the project theme **Conflict, Morality, and Polarization**. The **X** file adds **verification** and **follower** fields needed for **RQ 2**.
+
+**Key fields you plan to use**  
+- **Instagram** (`B50_INS_COMMENT.xlsx`): `text`, `likes`, `time`, `postlink`, `postid`, `userid`, `user`, `commentid`, `comment_re`  
+- **X** (`B50_X_COMMENT.xlsx`): `contents`, `likes`, `retweets count`, `reply counts`, `date`, `blue_verified`, `followers`, `Comment word length`, `username`, `userid` (plus other author fields as needed)  
+- **YouTube** (`B50_YT_COMMENT.xlsx`): `text`, `likes`, `time`, `source`, `user`, `comment_re`  
+
+We will add a derived **`platform`** label when merging or analyzing (`Instagram` / `X` / `YouTube`).
+
+---
+
+## 3. Preliminary variable operationalization
+
+| Construct | Operational definition | Data source / indicator |
 |-----------|------------------------|-------------------------|
-| [e.g., Skill-based discourse] | [e.g., Comments mentioning athletic performance, stats, gameplay] | [e.g., Keyword search in ARCC_INS_COMMENT.xlsx] |
-| | | |
-| | | |
+| **Platform** | Which site each row comes from | File source or derived `platform` column |
+| **Moralized discourse (binary or intensity)** | Comment contains **moral evaluation** language: virtue/vice (e.g., *corrupt*, *thief*, *deserve*, *traitor*, *evil*, *saint*, *shame*), **harm/care** (*hurt*, *kill*, *murder*, *danger*), **fairness/cheating** (*rigged*, *steal*, *fraud*), **loyalty/betrayal**; initial pass via **keyword list** + spot-check; optional **hand-coded** subsample for validation | `text` (Instagram, YouTube); `contents` (X) |
+| **Polarization cues (binary or category)** | Clear **pro-Trump** signals (e.g., *MAGA*, *Trump 2024*, *45*, strong praise positioning him as leader) vs. **anti-Trump** signals (e.g., *prison*, *loser*, blame for democracy/harm); **partisan blame** (Dems/Reps/liberal/snowflake/RINO patterns); **us-vs-them** framing; keyword dictionaries + spot-check | Same text fields as above |
+| **Engagement** | **Likes** on all platforms; on **X** add **retweets** and **reply counts** as secondary outcomes | `likes`; X: `retweets count`, `reply counts` |
+| **Author status (X only)** | **Verified** flag; **followers** (possibly binned: low / medium / high) | `blue_verified`, `followers` |
+| **Time (optional)** | Order or group comments by period after parsing | `time` (Instagram, YouTube); `date` (X) |
 
 ---
 
-## 4. Proposed Analyses
-Outline the analytical approaches you plan to use. For each, explain how it addresses your RQ.
+## 4. Proposed analyses
 
-| Analysis Type | Description | RQ Addressed |
+| Analysis type | Description | RQ addressed |
 |---------------|-------------|--------------|
-| [e.g., Keyword frequency analysis] | [e.g., Count occurrences of skill vs. appearance terms] | [RQ 1] |
-| | | |
-| | | |
+| **Descriptive summary** | N per platform; distributions of **likes** (and X: retweets, replies); % of comments flagged **moralized** and **polarized** per platform | RQ 1; baseline for RQ 2 |
+| **Cross-platform comparison** | Compare **proportions** (or mean **keyword counts**) of moralization and polarization **within** each platform; **chi-square** or similar where cell counts allow | RQ 1 |
+| **Engagement by category** | Mean/median **likes** (and X engagement) for moralized vs. not, polarized pro vs. anti vs. neutral/unclear—**within platform** to avoid comparing unlike baselines | RQ 1 |
+| **X subgroup analysis** | Compare **verified vs. not** and/or **follower bins** on engagement and on % moralized / % polarized | RQ 2 |
+| **Illustrative examples** | Short **anonymized or paraphrased** quotes backing each theme (after ethics review) | Supports interpretation for both RQs |
 
 ---
 
-## 5. Limitations & Potential Issues
-Identify at least 2-3 limitations or challenges with your approach. Be honest—acknowledging limits is a strength, not a weakness.
+## 5. Limitations and potential issues
 
-1. [Limitation 1]
-2. [Limitation 2]
-3. [Limitation 3]
-
----
-
-## 6. Ethical Considerations
-Address the following:
-- **Privacy:** Are you analyzing public or private data? Any risks of identifying individuals?
-- **Harm:** Could your analysis reinforce stereotypes or cause harm to groups discussed?
-- **Bias:** What biases might exist in your data or your interpretation?
-
-[Your response here]
+1. **Keyword methods are imperfect:** Sarcasm, slang, memes, and deleted/reordered threads can misclassify comments; we will **spot-check** and optionally **hand-code** a small random sample to sanity-check dictionaries.  
+2. **Not representative of the public:** The scrape reflects **specific posts/videos**, **platform algorithms**, and **who chooses to comment**; we describe **B50**, not all voters or all Trump discourse online.  
+3. **Engagement ≠ agreement:** High **likes** may reflect humor, controversy, or timing—not endorsement of a comment’s moral or political stance.  
+4. **X is much smaller** than YouTube/Instagram in this batch; tests for rare categories may be **underpowered**, and RQ 2 should be framed cautiously.  
 
 ---
 
-## 7. Group Role Assignments
-Specify who is responsible for what. Titles are flexible, but responsibilities must be clear.
+## 6. Ethical considerations
 
-| Role | Group Member | Primary Responsibilities |
-|------|--------------|--------------------------|
-| Data Lead | [Name] | [e.g., Data cleaning, preprocessing, file management] |
-| Methods Lead | [Name] | [e.g., Analysis design, tool implementation, documentation] |
-| Theory Lead | [Name] | [e.g., Literature integration, RQ refinement, interpretation] |
-| [Other role] | [Name] | [Responsibilities] |
+- **Privacy:** Data are **public** comments as provided for class. We report **aggregates** first; we avoid **naming or piling on** individual users in the write-up. Any quoted lines will be **short**, **paraphrased**, or **de-identified** where possible.  
+- **Harm:** Political research can **amplify hostility** or **stereotypes** (e.g., regional, partisan, or demographic blame) if findings are overgeneralized. We frame results as **patterns in this corpus**, not as proof about entire groups, and we avoid **sensational** reproduction of slurs except where essential—and then with clear framing.  
+- **Bias:** Our **keyword lists** encode assumptions; platforms differ in **moderation** and **demographics** of commenters; **English** and **U.S.-centric** political vocabulary may dominate. Comments may contain **false claims**; we analyze **language present**, not the **truth** of claims.  
 
 ---
 
-## 8. Data Visualization Plan
-Create at least ONE data visualization that addresses your research question(s). This is a required deliverable due with your project plan.
+## 7. Group role assignments
 
-**Primary Goal:**  
-What story does your visualization tell? What specific question does it answer?
+| Role | Group member | Primary responsibilities |
+|------|----------------|---------------------------|
+| Data lead | [Name] | Local copies of B50 files, cleaning, merge keys, `platform` field, date parsing, documenting columns |
+| Methods lead | [Name] | Keyword dictionaries, counts, tables, figures, statistical comparisons, documenting steps for reproducibility |
+| Theory / writing lead | [Name] | Tie findings to conflict/morality/polarization framing, draft report sections, polish RQ wording with group |
+| Visualization / QA | [Name] | Finalize `RWB_VISUAL.png` (or syllabus naming), verify totals, second-pass read for accuracy before submit |
 
-[Your response here]
-
-**Visualization Description:**  
-Describe what type of chart/graph you're creating and what it will show. (e.g., "Bar chart comparing frequency of X vs. Y," "Line graph showing change over time," "Word cloud of most common themes")
-
-[Your response here]
-
-**Design Rationale:**  
-Why did you choose this visualization type? How does it clarify your argument or make your data more understandable?
-
-[Your response here]
-
-**Verification Methods:**  
-How will you ensure your visualization accurately represents your data?
-- [ ] Spot-checked calculations against source data
-- [ ] Had groupmate review for accuracy
-- [ ] Verified percentages/totals add up correctly
-- [ ] Other: [specify]
-
-**The Visualization:**  
-Embed your visualization here (as an image) or provide a link to the file.
-
-[Insert visualization or link]
-
-**Brief Interpretation (2-3 sentences):**  
-What does this visualization show? What pattern or insight does it reveal?
-
-[Your response here]
+*Replace `[Name]` with your three members (some roles can be shared if you prefer).*
 
 ---
 
-## 9. AI-Assisted Work Documentation & Verification
-If you used AI tools (Antigravity, Cursor, ChatGPT, etc.) for any part of this plan, document your process and verification methods.
+## 8. Data visualization plan
 
-**Tools Used:**  
-Which AI tools/IDEs did you use, and for what purpose?
+**Goal**  
+Show **how comment volume differs across Instagram, X, and YouTube** in B50 so readers understand **scale** before interpreting cross-platform **theme** or **engagement** comparisons (YouTube has many more rows than X in this scrape).
 
-[Your response here]
+**Description**  
+A **bar chart** of **total comment counts** per platform (Instagram, X, YouTube), with counts **labeled on each bar**.
 
-**Verification Methods:**  
-How did you verify AI outputs were accurate and appropriate?
+**Design rationale**  
+Bar charts make **large differences in N** obvious; that supports transparent interpretation of RQ 1 (e.g., reporting **within-platform percentages** for themes, not only raw counts).
 
-- **Code Explanation:**  
-  - [ ] I asked AI to explain what each line/section of code does
-  - [ ] I reviewed explanations and understand the logic
-  - [ ] N/A (didn't use code-generating AI)
+**Verification**  
+- Spot-check row counts in each Excel file against the bar heights.  
+- Have a **second group member** confirm totals before submission.  
+- If we add a second figure later (e.g., **theme % by platform**), repeat the same checks for denominators.
 
-- **Output Validation:**  
-  - [ ] I cross-checked AI calculations against manual spot-checks (specify # of checks: ___)
-  - [ ] I verified outputs make logical sense given my data
-  - [ ] I compared AI results with what I know about my dataset
+**Figure**  
+![Comment volume by platform — B50 corpus](RWB_VISUAL.png)
 
-- **Iterative Refinement:**  
-  - Number of prompt iterations before getting usable output: ___
-  - Key refinements made: [describe]
-
-**Learning Reflection:**  
-What did you learn from working with AI on this project? What did examining the AI-generated code/outputs teach you?
-
-[Your response here]
+**Brief interpretation**  
+YouTube contributes the **largest** number of comments in B50, Instagram is **mid-sized**, and X is the **smallest**. Any claim about “typical” comments should note **unequal N**—we will emphasize **proportions within platform** alongside raw counts when comparing **moralization** or **polarization**.
 
 ---
 
-## Submission Checklist
-Before submitting, confirm:
-- [ ] All sections completed
-- [ ] RQs are specific, contextualized, and significance is justified
-- [ ] Dataset choice is confirmed
-- [ ] At least one construct is operationalized
-- [ ] Limitations and ethics are addressed honestly
-- [ ] All group members are assigned roles
-- [ ] Data visualization is included (Section 8)
-- [ ] Visualization includes verification methods
-- [ ] If AI tools were used, Section 9 is completed with verification documentation
+## 9. AI-assisted work (if applicable)
+
+**Tools used**  
+**Cursor** (or similar) assisted with **drafting** plan language, **structuring** operational definitions, and **suggesting** analysis steps consistent with the B50 columns. **Final choices** and **accuracy** are the group’s responsibility.
+
+**Verification**  
+We **opened the actual Excel files** to confirm **column names** and **sample comment content** before locking definitions. We will **re-run** counts locally for the visualization and **cross-check** any AI-suggested keyword lists against **manual reads** of random comments.
+
+**Reflection**  
+AI sped up **outlining** and **consistency** across sections, but **domain judgment** (what counts as moralized or polarized in *this* corpus) required **human spot-checks** of real rows—not just the model’s guesses.
 
 ---
 
-**Submission Reminder:**  
-- **File name:** `GROUPNAME_PLAN.md` (e.g., `GeauxTigers_PLAN.md`)
-- **Visualization file name:** `GROUPNAME_VISUAL.[extension]` (e.g., `GeauxTigers_VISUAL.pdf`)
-- **Email to:** [yqian@lsu.edu](mailto:yqian@lsu.edu)  
-- **CC:** All group members  
-- **Deadline:** Monday, January 27, 2026 by 11:59 PM
+## Checklist before deadline
+
+- [x] RQs filled and aligned with Conflict, Morality, and Polarization  
+- [x] B50 described; no data files committed to the repo (`git rm --cached` on `.xlsx`; `.gitignore` enforces `*.xlsx`, `*.csv`, `*.json`, `*.pdf`)  
+- [x] Operationalization, analyses, limitations, ethics, roles complete  
+- [x] Visualization included and verified  
+- [x] README updated with final research questions (`README.md`)  
+- [x] All collaborators added on GitHub; PR workflow followed *(repo **owner**: confirm invites under **Settings → Collaborators**; group uses **branch → PR → review → merge** per class — see README)*  

@@ -13,3 +13,9 @@ venv/
 # Editor
 .vscode/
 *.swp
+
+# Data & exports (keep local or on shared drive — do not commit)
+*.xlsx
+*.csv
+*.json
+*.pdf

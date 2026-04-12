@@ -1,6 +1,7 @@
 # KIN 7518 — Project 3 — **RWB**
 
 **Official group name:** **RWB** (use this prefix on syllabus files: `RWB_PLAN.md`, `RWB_VISUAL.png`).  
+**Public repo:** [github.com/lizzyratcliff/Project-3-RWB](https://github.com/lizzyratcliff/Project-3-RWB)  
 **Course:** Social Issues in Sport (LSU)  
 **Theme:** Conflict, Morality, and Polarization  
 **Research plan:** [`RWB_PLAN.md`](RWB_PLAN.md)  
@@ -10,11 +11,9 @@
 
 | Name | GitHub (optional) |
 |------|-------------------|
-| Lizzy Ratcliff | _(add @handle if you want)_ |
-| [Member 2] | @[username] |
-| [Member 3] | @[username] |
-
-*Add **RWB** teammates’ names and GitHub handles when ready.*
+| Jardyn Washington | _(add @handle if you want)_ |
+| Elizabeth Ratcliff (Lizzy) | _(add @handle if you want)_ |
+| Isabelle Besselman | _(add @handle if you want)_ |
 
 ## Research questions
 
@@ -53,10 +52,14 @@ Expected filenames (same folder on each machine, e.g. `dataset/`):
 
 `.gitignore` excludes `*.xlsx`, `*.csv`, `*.json`, and `*.pdf` so these are not committed by mistake.
 
-## GitHub setup and workflow
+## Collaboration workflow
 
-1. **Collaborators:** Repository **owner** → **Settings** → **Collaborators** (or **Manage access**) → invite both other members with appropriate access (e.g. **Write**).
-2. **Workflow:** `git pull` → create a **feature branch** → commit → `git push` → open a **Pull Request** → teammate **review** → **merge** to `main`, as demonstrated in class.
+Each team member works on their own branch and submits changes through pull requests. One member can serve as the manager who reviews and merges approved work into `main`.
+
+**Cycle:** `git pull` → branch → work → commit → push → PR → review → merge.
+
+1. **Collaborators:** Repository **owner** → **Settings** → **Collaborators** (or **Manage access**) → invite teammates with **Write** access.
+2. **This repo is public** — treat it like a portfolio piece. **Do not commit** scraped social data.
 
 ## License / course use
 

@@ -13,3 +13,10 @@ venv/
 # Editor
 .vscode/
 *.swp
+
+# Data files (do not track)
+*.xlsx
+*.csv
+*.json
+*.pdf
+data/

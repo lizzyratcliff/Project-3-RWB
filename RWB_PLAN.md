@@ -12,7 +12,7 @@
 
 ### RQ 1
 **The question**  
-In the **B50** cross-platform comment corpus (**Instagram**, **X**, **YouTube**), how do **moralized discourse** (comments that cast figures or groups as **virtuous vs. corrupt**, **deserving vs. undeserving**, **dangerous vs. harmless**, or that invoke **duty**, **betrayal**, or **care/harm**) and **polarization cues** (clear **pro-Trump vs. anti-Trump** positioning, **partisan blame**, or **us-vs-them** framing) **differ across platforms**—and how are those patterns associated with **visible engagement** (e.g., **likes**; on **X**, also **retweets** and **replies**)?
+**(a)** In the **B50** cross-platform social comment corpus (**Instagram**, **X**, **YouTube**)—collected around **sport–politics crossover** media where **Trump-related** political talk is prevalent—how do **moralized discourse** (comments that cast figures or groups as **virtuous vs. corrupt**, **deserving vs. undeserving**, **dangerous vs. harmless**, or that invoke **duty**, **betrayal**, or **care/harm**) and **polarization cues** (clear **pro-Trump vs. anti-Trump** positioning, **partisan blame**, or **us-vs-them** framing) **differ across platforms**? **(b)** **Within each platform**, how are those categories **correlated** with **visible engagement** (e.g., **likes**; on **X**, also **retweets** and **replies**)? We treat engagement as a **descriptive correlate**, not proof that a comment type *caused* more reactions.
 
 **The context**  
 B50 comments cluster around **hybrid sport–politics media**: public figures and **golf/sports crossover content** that draws **audience talk about Donald Trump**, elections, and related controversies. That setting is a strong fit for the course theme **Conflict, Morality, and Polarization** because audiences often **moralize** politics (who is a “thief,” who “tried to murder,” who deserves veterans’ charity) while **sorting** into opposing camps. We draw on **political communication** (framing and agenda-setting), work on **affective polarization** (identity-laden support and opposition), and **moral foundations** thinking (harm, fairness, loyalty, authority) as lenses for **why** language takes the shape it does—not to judge voters, but to **describe comment-level patterns**. A **cross-platform** design fits because **Instagram**, **X**, and **YouTube** differ in **length norms**, **threading**, and **algorithmic visibility**, which may shape how **conflict** and **morality** are expressed.
@@ -24,7 +24,7 @@ B50 comments cluster around **hybrid sport–politics media**: public figures an
 
 ### RQ 2 (optional)
 **The question**  
-On **X only**, is **author verification** (`blue_verified`) or **follower count** associated with **higher engagement** or with a **greater share of moralized or highly polarized** comments in the B50 subsample?
+On **X only** (the smallest B50 subsample), are **author verification** (`blue_verified`) or **follower count** (e.g., binned tiers) **correlated** with **(a)** **engagement** (likes, retweets, replies) and/or **(b)** a **higher share** of comments we code as **moralized** or **polarized** (per §3)?
 
 **The context**  
 The **X** file includes **rich author metadata** that the other two exports lack. That lets us ask whether **status and reach** align with **how** conflict and morality are performed in this smaller **X** slice—relevant to debates about **who dominates** visible political talk.

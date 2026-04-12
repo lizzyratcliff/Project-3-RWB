@@ -20,11 +20,11 @@
 
 ### RQ 1 (primary)
 
-In the **B50** cross-platform comment corpus (**Instagram**, **X**, **YouTube**), how do **moralized discourse** (comments that cast figures or groups as virtuous vs. corrupt, deserving vs. undeserving, dangerous vs. harmless, or that invoke duty, betrayal, or care/harm) and **polarization cues** (clear pro-Trump vs. anti-Trump positioning, partisan blame, or us-vs-them framing) **differ across platforms**—and how are those patterns associated with **visible engagement** (e.g., **likes**; on **X**, also **retweets** and **replies**)?
+**(a)** In the **B50** cross-platform social comment corpus (**Instagram**, **X**, **YouTube**)—collected around **sport–politics crossover** media where **Trump-related** political talk is prevalent—how do **moralized discourse** and **polarization cues** (pro- vs. anti-Trump positioning, partisan blame, us-vs-them framing) **differ across platforms**? **(b)** **Within each platform**, how are those categories **correlated** with **visible engagement** (likes; on **X**, retweets and replies)? Engagement is treated as a **descriptive correlate**, not a causal outcome.
 
 ### RQ 2 (optional)
 
-On **X only**, is **author verification** (`blue_verified`) or **follower count** associated with **higher engagement** or with a **greater share of moralized or highly polarized** comments in the B50 subsample?
+On **X only**, are **`blue_verified`** or **follower count** **correlated** with **(a)** engagement and/or **(b)** a higher share of comments coded **moralized** or **polarized** (see plan §3)?
 
 Full context, significance, methods, ethics, and roles are documented in **`RWB_PLAN.md`**.
 

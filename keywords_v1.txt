@@ -1,7 +1,9 @@
 # B50 keyword dictionary v1 — RWB (KIN 7518 P3)
+# Rev: v1.1 — expanded STANCE_PRO cues (informal praise / slogans) after double-coding misses.
 # One term or phrase per line after a section header. Lines starting with # are comments.
 # Matching: tokens use word boundaries; phrases use substring after lowercasing.
 # Standalone "45" is intentionally omitted (sports scores); use #45, president 45, etc.
+# Bare "trump" is not a token (too many neutral mentions); use multi-word pro phrases below.
 
 ## MORAL_VIRTUE_VICE
 corrupt
@@ -119,11 +121,39 @@ still standing
 gen z for trump
 women for trump
 latinos for trump
+president trump
+president donald trump
+mr trump
+donald j trump
+trump fan
+team trump
+trump train
+america first
+keep america great
+make america great again
+trump rally
+trump 2028
+stand with trump
+trump supporter
+trump supporters
+we love trump
+trump won
+still my president
+drain the swamp
+god bless trump
+the best president
+trump is the best
+trump is a legend
+trump legend
+trump goat
+go trump
+run trump run
 
 ## STANCE_PRO_TOKEN
 maga
 potus
 kag
+djt
 
 ## STANCE_ANTI_PHRASE
 never trump

@@ -57,7 +57,7 @@ We will add a derived **`platform`** label when merging or analyzing (`Instagram
 |-----------|------------------------|-------------------------|
 | **Platform** | Which site each row comes from | File source or derived `platform` column (`Instagram` / `X` / `YouTube`) |
 | **Moralized discourse** | **Binary `moralized`:** comment text matches **≥1** term from our dictionaries in **any** of these **families**: (1) virtue/vice (*corrupt*, *thief*, *deserve*, *traitor*, *evil*, *saint*, *shame*, …); (2) harm/care (*hurt*, *kill*, *murder*, *danger*, …); (3) fairness/cheating (*rigged*, *steal*, *fraud*, …); (4) loyalty/betrayal (*traitor*, *betray*, …). **Optional intensity:** count how many of the **four families** fire (0–4) for exploratory plots. **Overlap:** a comment can be both **moralized** and **polarized** (e.g., “traitor” + anti-Trump cues). | `text` (Instagram, YouTube); `contents` (X) |
-| **Polarization cues** | **Categorical `stance` (one primary label per comment, after preprocessing):** **`pro-Trump`** — e.g., *MAGA*, *Trump 2024*, *#MAGA*, praise framing him as leader/POTUS; **`anti-Trump`** — e.g., *prison*, *loser*, direct blame aimed at him; **`partisan_other`** — clear **partisan** or **us-vs-them** language (*Dems*, *Republicans*, *liberal*, *RINO*, *snowflake*, …) **without** a clear pro- vs. anti-Trump cue; **`neutral_unclear`** — none of the above. **`mixed`:** both pro- and anti-Trump cues present — either code **`mixed`** or use a **written tie-break rule** (e.g., count keyword weights; if still tied, `mixed`). **Caution:** standalone *45* is **noisy** (sports scores, etc.); prefer *#45*, *President 45*, or spot-check matches. Keyword lists + **spot-check**; optional **hand-coded** subsample to estimate agreement. | Same text fields as above |
+| **Polarization cues** | **Categorical `stance` (one primary label per comment, after preprocessing):** **`pro-Trump`** — e.g., *MAGA*, *Trump 2024*, *#MAGA*, *president trump*, common slogans/praise; **`anti-Trump`** — e.g., *prison*, *loser*, direct blame aimed at him; **`partisan_other`** — clear **partisan** or **us-vs-them** language (*Dems*, *Republicans*, *liberal*, *RINO*, *snowflake*, …) **without** a clear pro- vs. anti-Trump cue; **`neutral_unclear`** — none of the above. **`mixed`:** both pro- and anti-Trump cues present — either code **`mixed`** or use a **written tie-break rule** (e.g., count keyword weights; if still tied, `mixed`). **Caution:** standalone *45* is **noisy** (sports scores, etc.); prefer *#45*, *President 45*, or spot-check matches. **Dictionary limits:** many comments express support or opposition **without** matching a list term—reported **`pro-Trump`/`anti-Trump` shares are not exhaustive** of “real” sentiment (see §5). Keyword lists + **spot-check**; optional **hand-coded** subsample to estimate agreement. | Same text fields as above |
 | **Engagement** | **Primary:** `likes` (all platforms). **X secondary:** `retweets count`, `reply counts`. For summaries we report **medians** and **means**; if distributions are **heavily skewed**, we may use **log(1 + likes)** for correlational views only (still descriptive). | `likes`; X: `retweets count`, `reply counts` |
 | **Author status (X only)** | **`blue_verified`:** use field as scraped (boolean/yes-no). **`followers`:** report distribution first, then bin (e.g., **tertiles** on this file, or fixed cuts such as **under 1k / 1k–100k / over 100k** followers) so bins are documented in the appendix. | `blue_verified`, `followers` |
 | **Time (optional)** | Parse to datetime; optional **week** or **month** buckets if we study volume or theme over time (only if timelines are substantive in B50). | `time` (Instagram, YouTube); `date` (X) |
@@ -65,7 +65,8 @@ We will add a derived **`platform`** label when merging or analyzing (`Instagram
 **Operational notes (preliminary)**  
 - **Preprocessing:** lowercase text; **word-boundary** matching (or careful substring rules) to limit false positives; keep original string for examples.  
 - **Validation:** independently **double-code** a random **n ≈ 50–100** comments for `stance` and/or `moralized` and report **simple agreement** (e.g., % match) in the final write-up.  
-- **Transparency:** freeze **v1 dictionary** in an appendix or repo **non-data** file (e.g., `keywords_v1.txt`) so the instructor can see exact terms.
+- **Transparency:** freeze **v1 dictionary** in an appendix or repo **non-data** file (e.g., `keywords_v1.txt`) so the instructor can see exact terms. **v1.1** adds **informal pro-Trump phrases** (e.g., *president trump*, slogans) after double-coding showed many **manual pro-Trump** vs **automated `neutral_unclear`** mismatches—re-run `scripts/analyze_b50.py` after any dictionary change.  
+- **Statistics (exploratory):** for platform × stance we report **Cramér’s V** (effect size) alongside χ²; for **moralized vs engagement** we report **Spearman ρ** with **log(1+likes)** to respect skew. **X-only** subgroup **%**s include **Wilson 95% intervals** where noted in `analysis/results_summary.md`.
 
 ---
 
@@ -74,9 +75,9 @@ We will add a derived **`platform`** label when merging or analyzing (`Instagram
 | Analysis type | Description | RQ addressed |
 |---------------|-------------|--------------|
 | **Descriptive summary** | N per platform; distributions of **likes** (and X: retweets, replies); % of comments flagged **moralized** and **polarized** per platform | RQ 1; baseline for RQ 2 |
-| **Cross-platform comparison** | Compare **proportions** (or mean **keyword counts**) of moralization and polarization **within** each platform; **chi-square** or similar where cell counts allow | RQ 1 |
+| **Cross-platform comparison** | Compare **proportions** (or mean **keyword counts**) of moralization and polarization **within** each platform; **chi-square** with **Cramér’s V** (not only *p*) and cell-count checks | RQ 1 |
 | **Engagement by category** | Mean/median **likes** (and X engagement) for **moralized vs. not** and for **`stance`** categories (**pro-Trump**, **anti-Trump**, **partisan_other**, **neutral_unclear**, **mixed** if used)—**within platform** | RQ 1 |
-| **X subgroup analysis** | Compare **verified vs. not** and/or **follower bins** on engagement and on % moralized / % polarized | RQ 2 |
+| **X subgroup analysis** | Compare **verified vs. not** and/or **follower bins** on engagement and on % moralized / % polarized; frame as **exploratory**; **Wilson CIs** for key proportions where reported | RQ 2 |
 | **Illustrative examples** | Short **anonymized or paraphrased** quotes backing each theme (after ethics review) | Supports interpretation for both RQs |
 
 ---
@@ -84,9 +85,11 @@ We will add a derived **`platform`** label when merging or analyzing (`Instagram
 ## 5. Limitations and potential issues
 
 1. **Keyword methods are imperfect:** Sarcasm, slang, memes, and deleted/reordered threads can misclassify comments; we will **spot-check** and optionally **hand-code** a small random sample to sanity-check dictionaries.  
-2. **Not representative of the public:** The scrape reflects **specific posts/videos**, **platform algorithms**, and **who chooses to comment**; we describe **B50**, not all voters or all Trump discourse online.  
-3. **Engagement ≠ agreement:** High **likes** may reflect humor, controversy, or timing—not endorsement of a comment’s moral or political stance.  
-4. **X is much smaller** than YouTube/Instagram in this batch; tests for rare categories may be **underpowered**, and RQ 2 should be framed cautiously.  
+2. **Stance labels are conservative:** Automated **`pro-Trump`/`anti-Trump`** only fire when **list terms** match; **ironic praise**, **implicit support**, or **non-lexical** cues often remain **`neutral_unclear`**. Reported polarized **%**s are **lower-bound indicators** of dictionary-defined cues, not a full map of audience opinion.  
+3. **Not representative of the public:** The scrape reflects **specific posts/videos**, **platform algorithms**, and **who chooses to comment**; we describe **B50**, not all voters or all Trump discourse online.  
+4. **Engagement ≠ agreement:** High **likes** may reflect humor, controversy, or timing—not endorsement of a comment’s moral or political stance.  
+5. **X is much smaller** than YouTube/Instagram in this batch; tests for rare categories may be **underpowered**, and RQ 2 should be framed cautiously.  
+6. **Large-N tests:** χ² **p** can be negligible even for modest associations; we emphasize **Cramér’s V** and **substantive %** differences, not *p* alone.  
 
 ---
 

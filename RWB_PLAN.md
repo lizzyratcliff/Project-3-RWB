@@ -1,5 +1,6 @@
-# Project 3 — Research Plan (Group RWB)
+# Project 3 — Research Plan — **RWB**
 
+**Group name:** **RWB**  
 **Course:** KIN 7518 — Social Issues in Sport  
 **Project theme:** Conflict, Morality, and Polarization  
 **Dataset:** **B50** — cross-platform social comments (stored **locally**; see README). Files: `B50_INS_COMMENT.xlsx`, `B50_X_COMMENT.xlsx`, `B50_YT_COMMENT.xlsx`  

@@ -1,11 +1,12 @@
-# Project 3 — Group RWB
+# KIN 7518 — Project 3 — **RWB**
 
-**Course:** KIN 7518 — Social Issues in Sport (LSU)  
+**Official group name:** **RWB** (use this prefix on syllabus files: `RWB_PLAN.md`, `RWB_VISUAL.png`).  
+**Course:** Social Issues in Sport (LSU)  
 **Theme:** Conflict, Morality, and Polarization  
 **Research plan:** [`RWB_PLAN.md`](RWB_PLAN.md)  
 **Visualization:** [`RWB_VISUAL.png`](RWB_VISUAL.png)
 
-## Team
+## Team (RWB)
 
 | Name | GitHub (optional) |
 |------|-------------------|
@@ -13,7 +14,7 @@
 | [Member 2] | @[username] |
 | [Member 3] | @[username] |
 
-*Replace placeholders with your group’s names and handles.*
+*Replace placeholders with **RWB** member names and GitHub handles.*
 
 ## Research questions
 

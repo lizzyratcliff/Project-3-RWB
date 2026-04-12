@@ -39,7 +39,7 @@ python scripts/analyze_b50.py
 
 - **`keywords_v1.txt`** — frozen v1 dictionaries (moral families + stance); edit and re-run to iterate.
 - **`analysis/results_summary.md`** — aggregate tables only (no comment text); regenerate after keyword changes.
-- **Double-coding sample (§3):** `python scripts/export_coding_sample.py 80` writes `analysis/doublecode_sample.csv` (CSV is gitignored — do not commit).
+- **Double-coding sample (§3):** `python scripts/export_coding_sample.py 80` writes `analysis/doublecode_sample.csv` (CSV is gitignored — do not commit). After you fill manual columns, run `python scripts/compare_doublecode_to_keywords.py` to refresh `analysis/doublecode_agreement_note.md` (aggregate agreement vs `keywords_v1`; no comment text in that file).
 
 ## Dataset (local only)
 

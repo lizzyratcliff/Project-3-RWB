@@ -102,12 +102,12 @@ We will add a derived **`platform`** label when merging or analyzing (`Instagram
 
 | Role | Group member | Primary responsibilities |
 |------|----------------|---------------------------|
-| Data lead | [Name] | Local copies of B50 files, cleaning, merge keys, `platform` field, date parsing, documenting columns |
+| Data lead | Lizzy Ratcliff | Local copies of B50 files, cleaning, merge keys, `platform` field, date parsing, documenting columns |
 | Methods lead | [Name] | Keyword dictionaries, counts, tables, figures, statistical comparisons, documenting steps for reproducibility |
 | Theory / writing lead | [Name] | Tie findings to conflict/morality/polarization framing, draft report sections, polish RQ wording with group |
 | Visualization / QA | [Name] | Finalize `RWB_VISUAL.png` (or syllabus naming), verify totals, second-pass read for accuracy before submit |
 
-*Replace `[Name]` with your three members (some roles can be shared if you prefer).*
+*Add your two teammates for the remaining roles (swap roles if the group prefers—four roles can be shared across three people).*
 
 ---
 

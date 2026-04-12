@@ -10,11 +10,11 @@
 
 | Name | GitHub (optional) |
 |------|-------------------|
-| [Member 1] | @[username] |
+| Lizzy Ratcliff | _(add @handle if you want)_ |
 | [Member 2] | @[username] |
 | [Member 3] | @[username] |
 
-*Replace placeholders with **RWB** member names and GitHub handles.*
+*Add **RWB** teammates’ names and GitHub handles when ready.*
 
 ## Research questions
 

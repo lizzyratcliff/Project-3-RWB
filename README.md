@@ -28,6 +28,19 @@ On **X only**, are **`blue_verified`** or **follower count** **correlated** with
 
 Full context, significance, methods, ethics, and roles are documented in **`RWB_PLAN.md`**.
 
+## Run the analysis (optional)
+
+Requires Python 3.10+ and local copies of the three Excel files under `dataset/`.
+
+```bash
+python -m pip install -r requirements.txt
+python scripts/analyze_b50.py
+```
+
+- **`keywords_v1.txt`** — frozen v1 dictionaries (moral families + stance); edit and re-run to iterate.
+- **`analysis/results_summary.md`** — aggregate tables only (no comment text); regenerate after keyword changes.
+- **Double-coding sample (§3):** `python scripts/export_coding_sample.py 80` writes `analysis/doublecode_sample.csv` (CSV is gitignored — do not commit).
+
 ## Dataset (local only)
 
 B50 consists of three Excel exports (Instagram, X, YouTube comments). **Per course instructions, data files are not stored in this repository.** Each member keeps copies **locally** or on a **shared drive**.

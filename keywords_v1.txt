@@ -1,0 +1,179 @@
+# B50 keyword dictionary v1 — RWB (KIN 7518 P3)
+# One term or phrase per line after a section header. Lines starting with # are comments.
+# Matching: tokens use word boundaries; phrases use substring after lowercasing.
+# Standalone "45" is intentionally omitted (sports scores); use #45, president 45, etc.
+
+## MORAL_VIRTUE_VICE
+corrupt
+corruption
+corrupted
+thief
+thieves
+steal
+stole
+stolen
+deserve
+deserves
+deserved
+traitor
+traitors
+treason
+betray
+betrayal
+betrayed
+evil
+villain
+monster
+shame
+shameful
+disgrace
+disgusting
+pathetic
+immoral
+decency
+indecent
+dishonor
+dishonorable
+sacred
+sinful
+sinner
+coward
+cowards
+
+## MORAL_HARM
+hurt
+hurts
+hurting
+harm
+harmful
+kill
+kills
+killed
+killing
+murder
+murdered
+murders
+assassination
+assassinate
+danger
+dangerous
+violence
+violent
+attack
+attacked
+attacking
+destroy
+destroyed
+blood
+death
+dead
+die
+dies
+died
+
+## MORAL_FAIRNESS
+rigged
+fraud
+fraudulent
+cheat
+cheating
+cheater
+unfair
+justice
+injustice
+criminal
+crime
+illegal
+liar
+liars
+lying
+lies
+steal
+stolen
+hoax
+
+## MORAL_LOYALTY
+loyalty
+disloyal
+sellout
+sellouts
+oath
+mutiny
+
+## STANCE_PRO_PHRASE
+#maga
+#45
+president 45
+ultra maga
+trump 2024
+trump2024
+four more years
+best president
+greatest president
+love trump
+support trump
+vote trump
+vote for trump
+pro trump
+still standing
+gen z for trump
+women for trump
+latinos for trump
+
+## STANCE_PRO_TOKEN
+maga
+potus
+kag
+
+## STANCE_ANTI_PHRASE
+never trump
+not my president
+lock him up
+trump is a criminal
+trump belongs
+go to prison
+in prison
+should resign
+assassination attempt
+worst president
+
+## STANCE_ANTI_TOKEN
+fascist
+dictator
+dictatorship
+unfit
+indicted
+convicted
+felon
+nazi
+racist
+
+## STANCE_PARTISAN_TOKEN
+dems
+democrat
+democrats
+republican
+republicans
+gop
+liberal
+liberals
+conservative
+conservatives
+snowflake
+snowflakes
+rino
+leftist
+leftists
+right-wing
+right wing
+communist
+socialist
+marxist
+woke
+the left
+the right
+biden
+harris
+obama
+pelosi
+mcconnell

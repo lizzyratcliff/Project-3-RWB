@@ -27,6 +27,16 @@ On **X only**, are **`blue_verified`** or **follower count** **correlated** with
 
 Full context, significance, methods, ethics, and roles are documented in **`RWB_PLAN.md`**.
 
+## Class presentation (PowerPoint)
+
+From the repo root (requires `python-pptx` in `requirements.txt`):
+
+```bash
+python scripts/build_rwb_presentation.py
+```
+
+Writes **`RWB_KIN7518_Presentation.pptx`** (outline follows `Template_Presentation_Outline.md`; slide 5 embeds `RWB_VISUAL.png`).
+
 ## Run the analysis (optional)
 
 Requires Python 3.10+ and local copies of the three Excel files under `dataset/`.

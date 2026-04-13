@@ -35,7 +35,7 @@ From the repo root (requires `python-pptx` in `requirements.txt`):
 python scripts/build_rwb_presentation.py
 ```
 
-Writes **`RWB_KIN7518_Presentation.pptx`** (outline follows `Template_Presentation_Outline.md`; slide 5 embeds `RWB_VISUAL.png`).
+Writes **`RWB_KIN7518_Presentation.pptx`** (RQ1 + RQ2, color theme, speaker notes; embeds `RWB_VISUAL.png` on the RQ1 findings slide).
 
 ## Run the analysis (optional)
 

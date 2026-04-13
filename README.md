@@ -38,7 +38,13 @@ python scripts/analyze_b50.py
 
 - **`keywords_v1.txt`** — frozen v1 dictionaries (moral families + stance); edit and re-run to iterate.
 - **`analysis/results_summary.md`** — aggregate tables only (no comment text); regenerate after keyword changes.
-- **Double-coding sample (§3):** `python scripts/export_coding_sample.py 80` writes `analysis/doublecode_sample.csv` (CSV is gitignored — do not commit). After you fill manual columns, run `python scripts/compare_doublecode_to_keywords.py` to refresh `analysis/doublecode_agreement_note.md` (aggregate agreement vs `keywords_v1`; no comment text in that file).
+- **Double-coding / validation (§3):**
+  1. `python scripts/export_coding_sample.py` — default **80** stratified rows → `analysis/doublecode_sample.csv` (gitignored; do not commit).
+  2. **Coder 1** fills `your_stance`, `your_moralized_yes_no` (`yes`/`no`), `coder_initials`.
+  3. **Coder 2** independently fills `stance_coder_2`, `moral_coder_2`, `coder_2_initials` (same stance labels as the plan).
+  4. `python scripts/compare_doublecode_to_keywords.py` — writes **`analysis/doublecode_agreement_note.md`**: coder vs automation **% agreement**, **inter-rater %** and **Cohen's kappa** when both coders are complete, and row lists for disagreements (still **no** comment text in that markdown).
+  5. After any `keywords_v1.txt` change, re-run `python scripts/analyze_b50.py` and re-run the compare script.
+- **Figure QA:** `analysis/results_summary.md` includes **Figure verification** counts; a second member should confirm they match `RWB_VISUAL.png` and the three Excel files.
 
 ## Dataset (local only)
 

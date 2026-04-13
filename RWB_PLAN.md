@@ -159,3 +159,9 @@ AI sped up **outlining** and **consistency** across sections, but **domain judgm
 - [x] Visualization included and verified  
 - [x] README updated with final research questions (`README.md`)  
 - [x] All collaborators added on GitHub; PR workflow followed *(repo **owner**: confirm invites under **Settings → Collaborators**; group uses **branch → PR → review → merge** per class — see README)*  
+
+### Wrap-up validation (repo tooling)
+
+- [ ] **Double-coding:** export ~**80** rows (`scripts/export_coding_sample.py`), two independent coders complete the CSV, then run `scripts/compare_doublecode_to_keywords.py` — cite **`analysis/doublecode_agreement_note.md`** in the final write-up (§3 validation).  
+- [ ] **Keywords:** keep `keywords_v1.txt` frozen in-repo; after edits, re-run `analyze_b50.py` and the compare script.  
+- [ ] **Figure QA:** confirm `RWB_VISUAL.png` bar counts match **`analysis/results_summary.md` → Figure verification** (and raw Excel row counts).  

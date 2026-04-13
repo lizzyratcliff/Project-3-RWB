@@ -212,6 +212,17 @@ def main() -> None:
     lines.append(_df_to_md(df["platform"].value_counts()))
     lines.append("\n")
 
+    lines.append("## Figure verification (`RWB_VISUAL.png`)\n")
+    lines.append(
+        "Bar heights in **`RWB_VISUAL.png`** should match these **row counts** (second member spot-checks vs. raw Excel). "
+        f"**Total comments in merge:** {len(df):,}.\n\n"
+    )
+    vc = df["platform"].value_counts()
+    for plat in ("Instagram", "X", "YouTube"):
+        if plat in vc.index:
+            lines.append(f"- **{plat}:** {int(vc.loc[plat]):,}\n")
+    lines.append("\n")
+
     lines.append("## % moralized by platform\n")
     g = df.groupby("platform")["moralized"].agg(["mean", "sum", "count"])
     g["pct_moralized"] = (g["mean"] * 100).round(2)

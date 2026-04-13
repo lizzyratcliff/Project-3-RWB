@@ -1,4 +1,9 @@
-"""One-time helper: fill doublecode_sample.csv with Lizzy Ratcliff (LR) spot-check codes."""
+"""Legacy helper: fills the **original 40-row** `doublecode_sample.csv` with LR spot-check codes.
+
+New workflow (plan §3): export **80** rows with `export_coding_sample.py`, then **manually** code
+`your_*` and (second rater) `stance_coder_2` / `moral_coder_2`, and run `compare_doublecode_to_keywords.py`.
+This script only runs when the CSV has exactly **40** data rows matching the first class sample.
+"""
 from pathlib import Path
 
 import pandas as pd

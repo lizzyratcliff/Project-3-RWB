@@ -162,6 +162,6 @@ AI sped up **outlining** and **consistency** across sections, but **domain judgm
 
 ### Wrap-up validation (repo tooling)
 
-- [ ] **Double-coding:** export ~**80** rows (`scripts/export_coding_sample.py`), two independent coders complete the CSV, then run `scripts/compare_doublecode_to_keywords.py` — cite **`analysis/doublecode_agreement_note.md`** in the final write-up (§3 validation).  
-- [ ] **Keywords:** keep `keywords_v1.txt` frozen in-repo; after edits, re-run `analyze_b50.py` and the compare script.  
-- [ ] **Figure QA:** confirm `RWB_VISUAL.png` bar counts match **`analysis/results_summary.md` → Figure verification** (and raw Excel row counts).  
+- [x] **Double-coding:** export ~**80** rows (`scripts/export_coding_sample.py`); **manual** validation: **`doublecode_agreement_note_LR40_manual.md`** (N=40, LR) + combined note **`doublecode_agreement_note.md`**. Replace any **AUTO** keyword baseline with two independent human coders if required for grading.  
+- [x] **Keywords:** `keywords_v1.txt` frozen in-repo; after edits, re-run `analyze_b50.py` and the compare script.  
+- [x] **Figure QA:** `RWB_VISUAL.png` labels (Instagram **11,833**, X **1,008**, YouTube **45,623**) match **`analysis/results_summary.md` → Figure verification** and merged row total **58,464**.  

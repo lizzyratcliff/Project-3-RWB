@@ -17,9 +17,13 @@ No raw comment text is stored here.
 
 Bar heights in **`RWB_VISUAL.png`** should match these **row counts** (second member spot-checks vs. raw Excel). **Total comments in merge:** 58,464.
 
+
 - **Instagram:** 11,833
+
 - **X:** 1,008
+
 - **YouTube:** 45,623
+
 
 
 ## % moralized by platform

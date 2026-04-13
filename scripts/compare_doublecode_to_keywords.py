@@ -1,6 +1,7 @@
 """Compare manual double-coding in doublecode_sample.csv to keywords_v1 automated labels."""
 from __future__ import annotations
 
+import argparse
 import sys
 from pathlib import Path
 
@@ -71,6 +72,16 @@ def _auto_labels(texts: pd.Series) -> tuple[list[str], list[str]]:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="Compare doublecode_sample.csv to keyword automation.")
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=OUT_PATH,
+        help=f"Output markdown (default: {OUT_PATH.name})",
+    )
+    args = parser.parse_args()
+    out_md: Path = args.out
+
     if not CSV_PATH.exists():
         print(f"Missing {CSV_PATH} — run scripts/export_coding_sample.py first.", file=sys.stderr)
         sys.exit(1)
@@ -187,14 +198,15 @@ def main() -> None:
                     f"coder2 `{c2_stance.loc[r.name]}` (auto `{r['auto_stance']}`)\n"
                 )
 
-    OUT_PATH.write_text("".join(lines), encoding="utf-8")
+    out_md.parent.mkdir(parents=True, exist_ok=True)
+    out_md.write_text("".join(lines), encoding="utf-8")
     print(f"Stance (c1 vs auto): {stance_agree_1:.1f}%  Moral (c1 vs auto): {moral_agree_1:.1f}%")
     if n_both > 0:
         print(
             f"Inter-rater stance: {stance_ir:.1f}% (kappa={kap_s:.3f})  "
             f"moral: {moral_ir:.1f}% (kappa={kap_m:.3f})"
         )
-    print(f"Wrote {OUT_PATH}")
+    print(f"Wrote {out_md}")
 
 
 if __name__ == "__main__":

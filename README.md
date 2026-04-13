@@ -42,8 +42,9 @@ python scripts/analyze_b50.py
   1. `python scripts/export_coding_sample.py` — default **80** stratified rows → `analysis/doublecode_sample.csv` (gitignored; do not commit).
   2. **Coder 1** fills `your_stance`, `your_moralized_yes_no` (`yes`/`no`), `coder_initials`.
   3. **Coder 2** independently fills `stance_coder_2`, `moral_coder_2`, `coder_2_initials` (same stance labels as the plan).
-  4. `python scripts/compare_doublecode_to_keywords.py` — writes **`analysis/doublecode_agreement_note.md`**: coder vs automation **% agreement**, **inter-rater %** and **Cohen's kappa** when both coders are complete, and row lists for disagreements (still **no** comment text in that markdown).
-  5. After any `keywords_v1.txt` change, re-run `python scripts/analyze_b50.py` and re-run the compare script.
+  4. `python scripts/compare_doublecode_to_keywords.py` — writes **`analysis/doublecode_agreement_note.md`** (or `--out path`): coder vs automation **% agreement**, **inter-rater %** and **Cohen's kappa** when both coders are complete, and row lists for disagreements (still **no** comment text in that markdown).
+  5. **Optional pipeline check:** `python scripts/prefill_doublecode_from_keywords.py` fills both coder columns with **AUTO** (keyword rules only), then `python scripts/compare_doublecode_to_keywords.py --out analysis/doublecode_agreement_AUTO80_body.md` and `python scripts/assemble_doublecode_agreement_note.py` rebuild the combined `doublecode_agreement_note.md` (keeps the **LR40 manual** section). Replace **AUTO** with real human codes for final validation.
+  6. After any `keywords_v1.txt` change, re-run `python scripts/analyze_b50.py` and re-run the compare script.
 - **Figure QA:** `analysis/results_summary.md` includes **Figure verification** counts; a second member should confirm they match `RWB_VISUAL.png` and the three Excel files.
 
 ## Dataset (local only)

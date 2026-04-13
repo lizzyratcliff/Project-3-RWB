@@ -17,6 +17,7 @@ venv/
 # Data & exports (keep local or on shared drive — do not commit)
 *.xlsx
 *.csv
+analysis/doublecode_agreement_AUTO80_body.md
 *.json
 *.pdf
 data/

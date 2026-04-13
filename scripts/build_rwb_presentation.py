@@ -126,11 +126,21 @@ def main() -> None:
     _notes(
         slide,
         """
- Welcome everyone. We are Group RWB. This project is for KIN 7518 — we studied online comments on posts where sports and politics overlap, especially around content that also draws a lot of discussion of Donald Trump.
+ [Timing: about 30–45 seconds. Optional: each member say name + one role, e.g. data / methods / writing.]
 
-        In plain terms: when a golf clip or athlete story sits next to political talk, the comment section is not “only sports.” People use moral language — who is corrupt, who deserves respect, who is dangerous — and they sort into camps. We are not here to judge voters. We measured patterns in language so we can describe what shows up and how it differs across Instagram, X, and YouTube.
+        OPENING LINE (pick one): “Today we’re sharing what happens in comment sections when sports stories bump into politics.” / “We analyzed tens of thousands of public comments to see how moral and political language shows up across three big platforms.”
 
-        You will hear two research questions. The first is our main question across all three platforms. The second zooms in on X because that file tells us whether an account had a blue check and roughly how many followers they had — so we can ask whether “who is commenting” relates to engagement and to our topic codes. Everything is descriptive: we are not claiming we proved why anything happened.
+        Welcome everyone. We are Group RWB. This project is for KIN 7518 — Social Issues in Sport. We studied online comments on posts where sports and politics overlap, especially content that also drew a lot of audience talk related to Donald Trump. We did not pick Trump to endorse or attack anyone; the class dataset was built around that topical overlap.
+
+        PLAIN-LANGUAGE HOOK: Imagine a highlight reel or athlete story where half the comments are about the game and half are about politicians. That thread is doing two jobs at once — sports talk and political identity talk. We care how that shows up in language: insults framed as morality (“traitor,” “shameful”), and cues that sort people into camps (clear pro- or anti- cues, or general partisan name-calling).
+
+        WHAT WE DID NOT DO: We are not scoring people as “good” or “bad” voters. We are not proving that a platform caused anyone to think a certain way. We describe patterns in text and counts in one class corpus (B50).
+
+        ROAD MAP: (1) Why this matters and our two research questions. (2) What data we have and how big each platform is. (3) How we measured “moralized” and “stance” and what extra we could do on X. (4) Main results for all platforms + chart. (5) Extra results for X only. (6) Big-picture takeaways and limits. (7) Questions.
+
+        You will hear TWO research questions. RQ1 is the main question across Instagram, X, and YouTube. RQ2 zooms in on X only because that spreadsheet included whether an account had a blue checkmark and follower counts — so we can ask, descriptively, whether “who is commenting” lines up with engagement and with our topic labels. Everything is correlational / descriptive.
+
+        IF THE ROOM LOOKS LOST: Offer a one-sentence version: “We counted how often comments use moral-war words and political keywords, then compared Instagram, X, and YouTube, and peeked at X commenters’ verification and follower levels.”
         """,
     )
 
@@ -150,13 +160,25 @@ def main() -> None:
         body_color=CHARCOAL,
         body_size=19,
         notes="""
-        Start with the social problem in everyday language. When sports and politics meet online — think a headline that mixes an athlete, a politician, and a heated audience — comments often sound like mini-debates about good and evil, betrayal, fairness, and “us versus them.” That matters for media literacy, for how leagues and teams manage their channels, and for how toxic or civil a thread feels.
+        [Timing: about 2–3 minutes. This slide sets up the “problem” and both questions — don’t rush the last bullet.]
 
-        Our data are a class corpus called B50: the same topical conversation scraped across three platforms. That lets us compare apples to apples in topic, not apples to oranges.
+        SOCIAL ISSUE (everyday words): When sports and politics meet online — a headline that mixes athletes, elections, or polarizing public figures — comment sections often turn into mini-debates about who is corrupt, who deserves respect, who is dangerous, and which “side” is to blame. That is the course theme in one picture: conflict, morality, and polarization. It matters for fans’ experience, for journalists covering hybrid stories, and for leagues or teams whose social channels host that talk.
 
-        Research Question 1 is the big picture: do the rates of “moralized” language and dictionary-defined political stance tags differ by platform, and within each site, do those tags travel together with visible engagement? We treat likes and shares as clues people noticed a comment — not proof everyone agreed with it.
+        DEFINE “POLARIZATION” FOR A GENERAL AUDIENCE: We mean visible cues in text that line up with political camps — for example clear pro- or anti-Trump phrases from our lists, or general partisan insults — not a full psychological measure of someone’s identity.
 
-        Research Question 2 is optional on the syllabus but we include it because X’s export has extra columns: verified badge and follower counts. We ask, in this small X sample, whether verified or high-follower accounts look different on engagement or on our topic codes. We will stress that X has only about a thousand comments here, so we frame RQ2 as exploratory and we use uncertainty intervals where we report percentages.
+        DATA IN ONE SENTENCE: B50 is a class corpus — the same topical scrape across Instagram, X, and YouTube — so we are comparing platforms while holding the topic area roughly constant. We are not comparing “all of Instagram” to “all of YouTube” in the world; we are comparing comments collected in this project around sport–politics crossover with heavy Trump-related audience talk.
+
+        WALK THE BULLETS:
+        • Bullet 1 — Tie to real life: people experience this when a golf clip or athlete post becomes a thread about politics.
+        • Bullet 2 — “Corpus B50” is just our label for the merged files; emphasize same topic across sites.
+        • Bullet 3 — RQ1 in one breath: “Do moral and political-cue rates differ by platform, and do those labels correlate with likes (and on X, retweets/replies)?” Stress DESCRIPTIVE — likes can mean outrage, jokes, or algorithms, not endorsement.
+        • Bullet 4 — RQ2 in one breath: “On X only, do checkmark status or follower size relate to engagement or to our moralized/stance shares?” Stress EXPLORATORY and SMALL N (~1,008).
+
+        IF ASKED “WHY THREE PLATFORMS?”: Different norms — short posts vs long threads, different moderation, different who shows up — so language and engagement can look different even when the topic is similar.
+
+        IF ASKED “WHY TRUMP-RELATED?”: That is where this dataset was collected; it is a slice of online talk, not a verdict on any politician.
+
+        TRANSITION LINE: “Next we’ll show how big the dataset is on each site — the bar chart preview matters for reading every later number.”
         """,
     )
 
@@ -175,11 +197,21 @@ def main() -> None:
         title_color=INDIGO,
         body_color=CHARCOAL,
         notes="""
-        We are working with comments that were already public on social platforms and provided for class. We never put raw comment spreadsheets in the public GitHub repo — only aggregate tables and this slide deck.
+        [Timing: about 1 minute. Goal: inoculate the audience against misreading huge N differences later.]
 
-        The total row count is a little under sixty thousand. YouTube is the giant bar in our figure — tens of thousands of rows. Instagram is mid-sized. X is the smallest. That size gap is why our main comparisons use percentages inside each platform, not only raw counts.
+        ETHICS / PRIVACY (one calm sentence): These were public comments collected for class; we report aggregates in the paper and slides, not a pile-on of individual users. The public GitHub repo has no raw spreadsheets — only methods, dictionaries, and summary tables.
 
-        “Scope” means we are not describing the whole internet or all voters. We describe this batch of posts and the people who chose to comment on them, as captured by the scrape and each platform’s rules at the time.
+        NUMBERS TO INTERNALIZE: Total 58,464 comments. YouTube 45,623 (~78% of rows). Instagram 11,833. X 1,008. If you only remember one thing: YouTube is the “big bar,” X is the “small bar.”
+
+        WHY WITHIN-PLATFORM PERCENTAGES MATTER: If you compare raw counts across platforms, YouTube would “win” every theme just because there are more rows. So for RQ1 we emphasize “out of all YouTube comments in B50, what percent…?” vs “out of all Instagram comments…?” That is fairer than comparing 2,548 to 284 raw moralized hits without context.
+
+        MERGE IN PLAIN ENGLISH: We stacked three exports and labeled each row with a platform variable. Same conceptual topic area; not necessarily the same single video cross-posted everywhere — but the class scrape is designed for cross-platform comparison of this theme.
+
+        IF ASKED “IS THIS REPRESENTATIVE?”: No — it is one batch tied to specific posts, algorithms, and who chose to comment. We describe B50, not “all Americans” or “the whole platform.”
+
+        IF ASKED “DATES?”: If your instructor wants collection window details, point them to the course data documentation; the slide focuses on scale and scope.
+
+        TRANSITION: “Now how did we turn text into categories? That’s the methods slide.”
         """,
     )
 
@@ -200,15 +232,23 @@ def main() -> None:
         body_color=CHARCOAL,
         body_size=18,
         notes="""
-        For a general audience, think of “moralized” as language that turns a disagreement into a moral fight — calling someone corrupt, a traitor, dangerous, or saying something is rigged or shameful. Our lists are frozen in a text file so anyone can audit them.
+        [Timing: about 2 minutes. This slide is dense — slow down; it prevents misinterpretation later.]
 
-        “Stance” here does not mean we read every comment’s soul. We used transparent keyword rules. If someone supports Trump with slang our list missed, we still label neutral_unclear. So when you see a “percent pro-Trump,” read it as “percent that matched our pro-Trump dictionary,” not “percent who secretly love Trump.”
+        BULLET 1 — MORALIZED (tell a story): “If a comment calls someone a traitor, says an election was rigged, or uses language about murder or danger as moral judgment, our ‘moralized’ flag may turn on — if it matches our family lists.” Four families: virtue/vice, harm/care, fairness/cheating, loyalty/betrayal. One hit in any family = moralized “yes.” It is a rough tool, not a philosopher’s full theory of morality.
 
-        For statistics in plain English: chi-square asks whether platform and stance label are related in the table; Cramer’s V says how strong that relationship is on a zero-to-one scale — we found a real but modest association. Spearman rho measures whether moralized comments tend to have higher or lower likes in a skewed world where most comments have very few likes.
+        BULLET 2 — STANCE: We assign one primary stance label from keyword lists: pro-Trump, anti-Trump, partisan_other (partisan but not clearly pro/anti Trump in our rules), neutral_unclear, or mixed. CRITICAL PLAIN-ENGLISH LINE: “Neutral_unclear is not the same as moderate politics.” It often means “our list didn’t catch the wording.” So pro-Trump % and anti-Trump % are lower-bound snapshots of dictionary-visible cues, not full public opinion.
 
-        For RQ 2 on X, “blue verified” is the checkmark field from the export. Follower tertiles split X authors into three equal-count buckets: lower, middle, and higher follower counts within this file. Wilson intervals are like confidence ribbons for percentages — especially helpful when a subgroup is small.
+        BULLET 3 — STATS (RQ1): Chi-square tests whether platform and stance are associated in the big cross-tab. p-values get tiny with huge N, so we emphasize Cramer’s V (~0.09) — a small-to-modest effect size. Spearman correlation: we pair each comment’s moralized yes/no with log(1+likes) because likes are super skewed (most comments have very few). Rho tells you direction/magnitude of a monotonic pattern, not a causal effect.
 
-        We also had humans spot-check a random sample so we are honest about where automation disagrees with a careful reader.
+        BULLET 4 — RQ2: “Blue_verified” is whatever the scrape recorded for a checkmark-style field. Tertiles: sort X authors by followers, split into three equal-sized groups so each third has about the same number of comments — low, mid, high reach within this file. Wilson 95% intervals: for percentages, think “plausible range given sample noise” — wider when subgroups are small.
+
+        BULLET 5 — VALIDATION: Humans double-coded a random sample (~40 comments in our archived spot-check). Stance agreement with automation was about 57.5% exact match; moralized agreement higher (~87.5%). That gap is expected when sarcasm, emojis, or context matter. Use that honesty to build trust.
+
+        IF ASKED “WHY KEYWORDS, NOT BERT / ChatGPT?”: For class we prioritized transparency and reproducibility — every term is in keywords_v1.txt. ML could be next step; it trades interpretability for flexibility.
+
+        IF ASKED “LOG(1+LIKES)?”:“Plus one” avoids log of zero; log pulls in extreme viral outliers so one monster comment does not dominate the raw scale.
+
+        TRANSITION: “With rules on the table, here is what we found across platforms — you’ll see the bar chart on the next slide.”
         """,
     )
 
@@ -251,15 +291,23 @@ def main() -> None:
     _notes(
         s5,
         """
-        This slide answers Research Question 1 with the headline numbers. Point at the bar chart first: YouTube’s bar is huge — that is why we keep saying “within platform percents.” Otherwise YouTube would dominate every raw count story.
+        [Timing: about 2 minutes. Gesture at the chart often — it anchors the story.]
 
-        Moralized percentages are single digits to low single digits on Instagram and a bit higher on X and YouTube in this scrape. In everyday language, explicit moral language — thieves, traitors, murder rhetoric, rigged elections in our lists — shows up in a small slice of rows, but not zero.
+        CHART WALKTHROUGH: Y-axis is number of comments; X-axis is platform. Read the labels on the bars out loud: Instagram 11,833; X 1,008; YouTube 45,623. One sentence: “YouTube is not just a little bigger — it’s most of the rows in this dataset.”
 
-        For stance, remember the conservative coding. Even so, YouTube in this batch has the largest share of comments that matched our pro-Trump dictionary. Instagram is much lower on that measure in the same topical scrape. X sits in the middle on several stance breakdowns. Cramer’s V around 0.09 means: yes, platform and stance patterning relate in the table, but this is not a “platform completely determines politics” effect — nuance matters.
+        BULLET 1 — VOLUME: Pair with the chart. Emphasize that any story about “more moral words on YouTube” could partly be “more comments total,” so we lean on within-platform percentages from the results tables.
 
-        The engagement bullet is easy to misread. Higher likes on pro-Trump-tagged X comments might mean agreement, might mean outrage clicks, might mean one viral thread. We are careful not to over-claim.
+        BULLET 2 — MORALIZED RATES: Read the three percents slowly: Instagram ~2.4%, X ~5.1%, YouTube ~5.6%. Plain English: “In this scrape, explicit moral-war keyword hits are uncommon on Instagram and somewhat more common on X and YouTube — still single-digit percentages.” Avoid saying “people are more moral on YouTube” — we measured dictionary matches, not character.
 
-        Transition: RQ 2 narrows to X only and asks whether account status and audience size line up with those patterns.
+        BULLET 3 — STANCE / POLARIZATION CUES: Most comments are neutral_unclear under strict lists — say that out loud so the room doesn’t think “most people have no politics.” Then contrast pro-Trump shares: YouTube ~10.5%, X ~5.8%, Instagram ~2.8% in this corpus. Cramer’s V ~0.09: “statistically detectable but modest — platform nudges the pattern; it doesn’t lock everyone into one stance.”
+
+        BULLET 4 — ENGAGEMENT ON X: Mean likes for pro-Trump-tagged comments (~132 in our tables) are much higher than other stance buckets on average. IMMEDIATELY QUALIFY: could be a few viral comments, could be argument threads, could be visibility — “we are not saying likes mean everyone agreed.”
+
+        PAUSE FOR CONFUSION: If someone looks skeptical about low moralized %, clarify: short comments like “LOL” or emoji-only won’t trigger long moral lists; many insults might still miss our terms.
+
+        TEAM TIP: If two people present, one narrates chart + moralized, other narrates stance + engagement.
+
+        TRANSITION: “RQ1 was all three sites. Next we isolate X because only that file had verification and follower data — that’s RQ2.”
         """,
     )
 
@@ -280,17 +328,25 @@ def main() -> None:
         body_color=CHARCOAL,
         body_size=17,
         notes="""
-        Research Question 2 is only about X because only that spreadsheet included verification and follower counts in a usable way for the whole class.
+        [Timing: about 2 minutes. Speak slowly — this is the easiest slide to over-interpret.]
 
-        Say clearly: about a thousand comments is enough for a classroom exercise but small for strong claims. When we split by verified versus not verified, one side has only 175 comments — that is why we report Wilson confidence intervals. In plain English, those intervals mean: “if we repeated similar sampling, a range like this would often contain the true underlying percent.” Wide intervals mean more uncertainty.
+        OPENING LINE: “Now we zoom in on X only, because only that export had consistent fields for verification and followers.”
 
-        The moralized comparison surprises some people: in this scrape, comments from accounts without a blue check showed a higher percent moralized than verified accounts, and the intervals overlap in a way that should make you cautious. Possible stories include who chooses to comment, what kinds of threads attracted unverified pile-ons, or how moderation and visibility differ — we are not picking one story with this table alone.
+        SAMPLE SIZE MANTRA: 1,008 comments total. That is fine for class, small for sweeping claims. Whenever you split into subgroups, some buckets get tiny — be humble.
 
-        Stance percentages by verification are also descriptive. You can read them as: verified accounts in this file lean a bit more toward dictionary-visible pro-Trump cues as a share of their comments, while the tiny not-verified slice shows more anti-Trump dictionary hits — but cell sizes mean do not dramatize small gaps.
+        BLUE CHECK — PLAIN ENGLISH: We used the scraped “verified / not verified” field. Verification rules and meaning changed over time on X; we are reporting what the dataset says, not endorsing checkmarks as “truth” or “quality.”
 
-        Follower tertiles split authors into three equal-sized groups by follower count within this X file. The pattern that lower-follower buckets have slightly higher moralized percentages is interesting for discussion but is not proof that having more followers makes people “nicer.” It is a correlation in one batch of posts.
+        MORALIZED BY VERIFICATION: Not verified n=175, ~8.0% moralized, Wilson interval roughly 4.8% to 13.0%. Verified n=833, ~4.4%, interval roughly 3.2% to 6.1%. SAY THIS CAREFULLY: “In this batch, unverified rows show a higher point estimate for moralized hits — but the intervals overlap, and the not-verified group is small, so don’t turn this into a headline about ‘verified people are nicer.’” Offer alternative explanations: different people attracted into threads, different moderation, viral outliers, sampling noise.
 
-        Close RQ2 by repeating the ethics point: this is one scrape; X is not the whole world; verified status changed in meaning over time; we are describing patterns, not judging people.
+        STANCE BY VERIFICATION: Walk the audience through “row percentages” — within each verification group, what share of comments fall in each stance bucket? Pro-Trump share is higher among verified in our table (~6.1% vs ~4.0%); anti-Trump share is higher in the not-verified slice (~4% vs ~1.4%) but the not-verified group is small — stress uncertainty.
+
+        FOLLOWER TERTILES: “We cut the X sample into thirds by follower count — low, mid, high — so each tertile has about the same number of comments.” Moralized ~7.1% → ~4.2% → ~3.9% from low to high followers in this file. Plain English: “suggestive step-down; still not causal.” Maybe bigger accounts face different norms; maybe content mix differs; we cannot tell from this table alone.
+
+        IF ASKED “SHOULD WE TRUST VERIFIED MORE?”: Our project does not rank whose opinion counts more — we describe patterns. Also recall selection: who comments on sport–politics crossover posts is not random.
+
+        IF ASKED “WHAT IS WILSON?”: “A statistician-approved way to put a range around a percent when sample size is modest — better than ‘plus or minus’ from a headline poll.”
+
+        CLOSE: “RQ2 is exploratory glue — it reminds us comment sections are not anonymous noise; who shows up can correlate with language and engagement in this scrape.”
         """,
     )
 
@@ -310,13 +366,25 @@ def main() -> None:
         body_color=CHARCOAL,
         body_size=18,
         notes="""
-        Pull both questions together for a general audience. First takeaway: when sports and politics overlap in this dataset, you see moral language and political cues, and the flavor differs by platform. YouTube’s slice in this scrape had the largest share of comments matching our pro-Trump list — still a minority of rows, with most comments uncoded as clearly pro or anti by our strict rules.
+        [Timing: about 2 minutes. This is your “so what” — land it clearly, then list limits without sounding like you’re disowning the project.]
 
-        Second takeaway: on X, account status and follower bins nudge the percentages in ways that should make us humble about “typical X user” claims. Verified and high-follower voices are not the whole commentariat.
+        TWO-SENTENCE SUMMARY: “Sport–politics crossover content pulls moral and political language into comment threads; in B50, the mix differs by platform. On X, account status and follower tiers nudge descriptive patterns — but X is a small slice, so we stay exploratory.”
 
-        Practical implication for sports industry folks in the room: treat political spillover as predictable, not accidental. Community guidelines, moderator training, and how official accounts frame hybrid content all matter for whether a thread stays informative or turns into a flame war.
+        RQ1 TAKEAWAY: YouTube dominates volume; within-platform, YouTube shows the largest dictionary-visible pro-Trump share in this scrape; Instagram is lowest on that measure; X is intermediate on several comparisons. Moralized keyword hits are uncommon everywhere but not zero — higher on X/YouTube than Instagram here. Effect sizes for platform × stance are modest — nuance, not a simple “Instagram is civil, YouTube is not” story.
 
-        Ethics and limits in one breath: we used automated dictionaries — they err. Likes can mean mockery. Our sample is one class corpus, not a census of America. We studied language on the page, not whether claims are factually true.
+        RQ2 TAKEAWAY: Verification and follower groups differ in moralized rates and stance mixes in descriptive tables — interpret with humility and overlapping uncertainty for small groups. This supports media literacy: “typical commenter” is not one person.
+
+        FOR SPORT ORGANIZATIONS / COMMS: Political spillover is a planning issue, not a surprise — hybrid posts can activate identity politics in replies. Moderation policies, pinned context, and how staff account replies are framed can steer tone. We are not prescribing law — we are flagging risk and variability.
+
+        FOR EDUCATORS / STUDENTS: Good discussion prompt — “Why might the same topic produce different comment chemistry on different apps?” Tie to algorithms, norms, and who uses each platform.
+
+        LIMITS CHECKLIST (say any three): (1) Keyword dictionaries miss sarcasm and implicit opinion. (2) Stance labels are conservative — lots stay neutral_unclear. (3) Engagement metrics are not votes of agreement. (4) One class corpus — not representative of all voters or all posts. (5) We analyze language present, not factual truth of claims.
+
+        IF ASKED “POLICY FIX?”: Stay humble — “We describe patterns; policy involves values, law, and platform governance beyond our data.”
+
+        IF ASKED “WHAT WOULD YOU DO NEXT?”: Bigger human-coded sample; richer context per thread; qualitative examples; or complementary methods — still with ethics and privacy.
+
+        STRONG CLOSING LINE BEFORE Q&A: “Our goal was transparent measurement and honest limits — so people can interpret sport–politics comment spaces with clearer eyes.”
 
         If someone asks “so who is right politically?” — the project is not designed to answer that. We describe language patterns in a defined sample.
         """,
@@ -334,13 +402,25 @@ def main() -> None:
     _notes(
         slide,
         """
-        Thank the audience and invite questions. If asked “why Trump?” — the corpus was collected around sport–politics crossover where that discourse was prevalent; we did not choose a random week of sports.
+        [Timing: flexible. Thank the class and instructor by name if appropriate.]
 
-        If asked “can AI replace reading comments?” — we double-coded a sample and report disagreement; human judgment still matters for sarcasm and context.
+        OPENING: “Thank you — happy to take questions. The GitHub link on screen has our plan, dictionaries, and scripts for transparency.”
 
-        If asked “what should Instagram do?” — we are researchers in training, not policy lawyers; we can speak to patterns and tradeoffs, not mandates.
+        LIKELY QUESTIONS — SHORT ANSWER PROMPTS:
+        • “Why Trump-related talk?” → Class corpus built around sport–politics crossover where that discourse was prevalent; not a random sports week.
+        • “Does this prove platforms cause polarization?” → No — descriptive patterns only; many confounds (algorithms, who comments, post selection).
+        • “Why so many neutral_unclear?” → Keyword stance coding is intentionally conservative; real opinion often doesn’t hit list phrases.
+        • “Can AI do this better?” → Maybe for recall, but transparency suffers; we prioritized auditable rules + human spot-checks.
+        • “Most surprising finding?” → (Team chooses) e.g. modest effect sizes despite huge N; or X verification pattern with overlapping CIs; or YouTube pro-Trump dictionary share vs Instagram in same topical scrape.
+        • “Biggest limitation?” → Keywords + one corpus + public comments ≠ full attitudes; engagement ≠ agreement.
+        • “Ethical issues?” → Public data still deserves care — aggregates first, avoid piling on individuals; don’t overgeneralize to groups.
+        • “What about TikTok / Facebook?” → Not in B50; different platforms would need their own scrape and ethics review.
 
-        Repo link is on screen for methods transparency.
+        IF STUMPED: “That’s a great question — we didn’t test that in this project, but here’s how we’d think about designing a follow-up…”
+
+        HANDOFF: If multiple presenters, agree who fields methods vs theory vs data questions.
+
+        END: “Thanks again — we’ll stay after if anyone wants to chat.”
         """,
     )
 
